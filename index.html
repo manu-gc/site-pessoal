@@ -4,227 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(246, 194, 223);
+            color: rgb(182, 110, 141);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background-color: rgb(214, 138, 178);
+            color: rgb(250, 204, 231);
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header p {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main {
+            border: 3px;
+            padding-top: 20px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: rgb(224, 148, 186);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid;
+            margin-bottom: 15px;
+        }
+
+        section h2 {
+            color: rgb(252, 216, 235);
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        li {
+            margin-top: 30px;
+        }
+
+        li a {
+            font-size: 15px;
+        }
+
+        a {
+            color: rgb(249, 202, 222);
+            text-decoration: beige;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .buttons {
+            text-align: right;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .buttons-visualizacao {
+            font-size: 20px;
+            color: rgb(208, 146, 171);
+            margin-left: 20px;
+        }
+
+        .modo-grade {
+            padding-top: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .modo-grade section {
+            width: 40%;
+        }
+
+        .imagem-quadro {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: rgb(246, 194, 223);
-        color: rgb(182, 110, 141);
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-    
-    header {
-        background-color: rgb(214, 138, 178);
-        color: rgb(250, 204, 231);
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    header h1 {
-        font-size: 50px;
-        margin-bottom: 30px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-
-    header p {
-        font-size: 20px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-
-    main{
-        border: 3px;
-        padding-top: 20px;
-        width: 400px;
-        margin: 0 auto;
-    }
-
-    section {
-background-color: rgb(224, 148, 186);
-padding: 20px;
-border-radius: 10px;
-border: 1px solid;
-margin-bottom: 15px;
-
-    }
-
-    section h2 {
-        color: rgb(252, 216, 235);
-    }
-
-    ul {
-        list-style-type: square;
-    }
-    li{
-        margin-top: 30px;
-    }
-
-    li a {
-        font-size: 15px;
-    }
-    a{
-        color:rgb(249, 202, 222);
-        text-decoration: beige;
-
-    }
-    a:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .buttons{
-        text-align: right;
-        margin-top: 20px;
-        margin-right: 20px;
-    }
-
-
-
-    .buttons-visualizacao {
-        font-size: 20px;
-        color: rgb(208, 146, 171);
-        margin-left: 20px;
-        
-    }
-
-    .modo-grade {
-        padding-top: 20px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .modo-grade section {
-        width: 40%;
-    }
-</style>
 <body>
     <header>
-        <h1>
-            Bem-vindo a minha página
-        </h1>
-        <p>
-            Aluna do ensino técnico
-        </p>
+        <h1>Bem-vindo a minha página</h1>
+        <p>Aluna do ensino técnico</p>
     </header>
+
     <div class="buttons">
         <button class="buttons-visualizacao" onclick="mudarGrade()">Visualização Grade</button>
         <button class="buttons-visualizacao" onclick="mudarLista()">Visualização Lista</button>
+        <button class="buttons-visualizacao" onclick="mudarFundo()">Fundo</button>
     </div>
 
-   <main id="principal">
-    <section>
-        <h2>
-            Minhas habilidades
+    <main id="principal">
+        <section>
+            <img class="imagem-quadro" src="https://cdn-icons-png.flaticon.com/512/896/896875.png" alt="Imagem">
+            <h2>Minhas habilidades</h2>
             <ul>
-                <li>
-                    <a href="https://www.impacta.com.br/blog/entenda-o-que-e-logica-de-programacao/?utm_source=&utm_medium=&utm_campaign=&utm_content=&gad_source=1&gad_campaignid=22177131561&gbraid=0AAAAAD758qKrnyL8Nj4-am_xMVwtsECC3&gclid=Cj0KCQjwndHEBhDVARIsAGh0g3APkCNmcFfZvffOkU37Nuti_8jFQQjURoLKxv-hzyXAYYn4hq0QeysaAvMHEALw_wcB" target="_blank">
-                        Lógica de Programação
-                    </a>
-                </li>
-                <li>
-                    <a href="https://beecrowd.com/pt/blog-posts/html5-e-css3/" target="_blank">
-                        HTML5
-                    </a> & 
-                    <a href="https://beecrowd.com/pt/blog-posts/html5-e-css3/" target="_blank">
-                        CSS3
-                    </a>
-                </li>
-                <li>
-                    <a href="https://pt.wikipedia.org/wiki/Trabalho_em_equipe" target="_blank">
-                        Trabalho em equipe
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.globalstar.com/pt-br/resource-center/articles/the-internet-of-things-and-satellite-technology?utm_term=&utm_campaign=K_Pesquisa_Blog&utm_source=adwords&utm_medium=ppc&hsa_acc=9881149503&hsa_cam=19046372309&hsa_grp=143524298803&hsa_ad=670919837740&hsa_src=g&hsa_tgt=dsa-2108821600072&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=19046372309&gbraid=0AAAAADPMilkisJ0nh85IjZg0EeKacUcNA&gclid=Cj0KCQjwndHEBhDVARIsAGh0g3At9OVN4zFu4fkAebOxmsQB-MaPQ6PMq4dbl4sab3bgYlWpOGi_zWsaAp3pEALw_wcB" target="_blank">
-                        IOT
-                    </a>
-                </li>
+                <li><a href="https://www.impacta.com.br/blog/entenda-o-que-e-logica-de-programacao/" target="_blank">Lógica de Programação</a></li>
+                <li><a href="https://beecrowd.com/pt/blog-posts/html5-e-css3/" target="_blank">HTML5</a> & 
+                    <a href="https://beecrowd.com/pt/blog-posts/html5-e-css3/" target="_blank">CSS3</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Trabalho_em_equipe" target="_blank">Trabalho em equipe</a></li>
+                <li><a href="https://www.globalstar.com/pt-br/resource-center/articles/the-internet-of-things-and-satellite-technology" target="_blank">IOT</a></li>
             </ul>
-        </h2>
-    </section>
-    <section>
-       <h2>
-    cursos
-    <ul>
-        <li>
-            <a href="https://www.impacta.com.br/cursos/introducao-a-logica-de-programacao-online-ao-vivo?utm_source=&utm_medium=&utm_campaign=&utm_content=&gad_source=1&gad_campaignid=22177131561&gbraid=0AAAAAD758qKrnyL8Nj4-am_xMVwtsECC3&gclid=Cj0KCQjwndHEBhDVARIsAGh0g3DF6PjryxXgeZSS0PK3_emwODjD734gzkzsPigrFEJbSOU7wO5s8tEaApteEALw_wcB" target="_blank">
-                Lógica de Programação
-            </a>
-        </li>
-        <li>
-            <a href="https://cate.prefeitura.sp.gov.br/cursos/tecnologia/curso-introducao-ao-levantamento-de-requisitos/" target="_blank">
-                Levantamento de requisistios
-            </a>
-        </li>
-        <li>
-            <a href="https://cursa.app/pt/curso-gratuito/sistemas-operacionais-completo-cebf" target="_blank">
-                Sistemas Operacionais
-            </a>
-        </li>
-        <li>
-            <a href="https://www.escolavirtual.gov.br/curso/534" target="_blank">
-                Redes IOT
-            </a>
-        </li>
-    </ul>
-</h2>
+        </section>
 
-    </section>
-    <section>
-      <h2>
-    Hobbies
-    <ul>
-        <li><a href="https://pt.wikipedia.org/wiki/Jogo_eletr%C3%B4nico" target="_blank">
-            Jogar</a>
-        </li>
-        <li><a href="https://pt.wikipedia.org/wiki/Sono" target="_blank">
-            Dormir</a>
-        </li>
-        <li><a href="https://pt.wikipedia.org/wiki/Filme" target="_blank">
-            Assistir filmes e séries</a>
-        </li>
-        <li><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica" target="_blank">
-            Ouvir músicas</a>
-        </li>
-    </ul>
-</h2>
-
-    </section>
-
-    <section>
-        <h2>
-            Contatos
+        <section>
+            <img class="imagem-quadro" src="https://cdn-icons-png.flaticon.com/512/9552/9552467.png" alt="Imagem">
+            <h2>Cursos</h2>
             <ul>
-                <li>
-                    <a href="mailto:manoela.cordova@aluno.senai.br">E-mail: manoela.cordova@aluno.senai.br</a>
-                </li>
+                <li><a href="https://www.impacta.com.br/cursos/introducao-a-logica-de-programacao-online-ao-vivo" target="_blank">Lógica de Programação</a></li>
+                <li><a href="https://cate.prefeitura.sp.gov.br/cursos/tecnologia/curso-introducao-ao-levantamento-de-requisitos/" target="_blank">Levantamento de requisitos</a></li>
+                <li><a href="https://cursa.app/pt/curso-gratuito/sistemas-operacionais-completo-cebf" target="_blank">Sistemas Operacionais</a></li>
+                <li><a href="https://www.escolavirtual.gov.br/curso/534" target="_blank">Redes IOT</a></li>
             </ul>
-        </h2>
-    </section>
-    <footer>
-        &copy; 2025 Manoela. Todos os direitos reservados.
-    </footer>
-</main>
+        </section>
+
+        <section>
+            <img class="imagem-quadro" src="https://cdn-icons-png.flaticon.com/512/9981/9981442.png" alt="Imagem">
+            <h2>Hobbies</h2>
+            <ul>
+                <li><a href="https://pt.wikipedia.org/wiki/Jogo_eletr%C3%B4nico" target="_blank">Jogar</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Sono" target="_blank">Dormir</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Filme" target="_blank">Assistir filmes e séries</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/M%C3%BAsica" target="_blank">Ouvir músicas</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <img class="imagem-quadro" src="https://auniao.pb.gov.br/imagens/imagens/imagens-acesso-rapido/icone-entre-em-contato.png/@@images/image.png" alt="Imagem">
+            <h2>Contatos</h2>
+            <ul>
+                <li><a href="mailto:manoela.cordova@aluno.senai.br">E-mail: manoela.cordova@aluno.senai.br</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2025 Manoela. Todos os direitos reservados.
+        </footer>
+    </main>
+
+    <script>
+        function mudarGrade() {
+            const principal = document.getElementById('principal');
+            principal.classList.add('modo-grade');
+        }
+
+        function mudarLista() {
+            const principal = document.getElementById('principal');
+            principal.classList.remove('modo-grade');
+        }
+
+        function mudarFundo() {
+            const cores = [
+                'rgb(246, 194, 223)',
+                'rgb(223, 246, 194)',
+                'rgb(194, 246, 243)',
+                'rgb(255, 230, 205)',
+                'rgb(230, 205, 255)'
+            ];
+            const body = document.body;
+            const corAtual = body.style.backgroundColor;
+            let novaCor = cores[Math.floor(Math.random() * cores.length)];
+            while (novaCor === corAtual) {
+                novaCor = cores[Math.floor(Math.random() * cores.length)];
+            }
+            body.style.backgroundColor = novaCor;
+        }
+    </script>
 </body>
-<script>
-    function mudarGrade() {
-        const principal= document.getElementById('principal')
-        principal.classList.toggle('modo-grade')
-    }
-   function mudarGrade() {
-        const principal= document.getElementById('principal')
-        principal.classList.add('modo-grade')
-    }
-    function mudarLista() {
-        alert("Oi, sou o botão que muda para lista")
-    }
-    function mudarLista() {
-    const principal= document.getElementById('principal')
-        principal.classList.remove('modo-grade')
-    }
-</script>
 </html>
