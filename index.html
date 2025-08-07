@@ -1,74 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Site pessoal</title>
-    </head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: rgb(235, 192, 209);
-            color:rgb(250, 239, 244);
-            font-family:Georgia, 'Times New Roman', Times, serif
-            
-        }
-        header {
-            background-color: rgb(207, 160, 181);
-            color:aliceblue;
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(246, 194, 223);
+        color: rgb(242, 147, 188);
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    header {
+        background-color: rgb(214, 138, 178);
+        color: rgb(250, 204, 231);
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
-        header h1 {
-            font-size: 50px;
-            margin-bottom: 30px;
-        }
+    header h1 {
+        font-size: 50px;
+        margin-bottom: 30px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
 
-        header p {
-            font-size: 30px;
-            font-family:serif
-        }
+    header p {
+        font-size: 20px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
 
-        main{
-            border: 3px rgb(129, 66, 89);
-            padding-top: 20px;
-            width: 400px;
-            margin: 0 auto;
-        }
+    main{
+        border: 3px;
+        padding-top: 20px;
+        width: 400px;
+        margin: 0 auto;
+    }
 
-        section {
-            background-color: rgb(192, 139, 161);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgb(188, 107, 136);
-        }
-    </style>
-    <body>
+    section {
+background-color: rgb(224, 148, 186);
+padding: 20px;
+border-radius: 10px;
+border: 1px solid;
+margin-bottom: 15px;
 
- </body>
+    }
+
+    section h2 {
+        color: rgb(252, 216, 235);
+    }
+
+    ul {
+        list-style-type: square;
+    }
+    li{
+        margin-top: 30px;
+    }
+
+    li a {
+        font-size: 15px;
+    }
+    a{
+        color:rgb(249, 202, 222);
+        text-decoration: beige;
+
+    }
+    a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .buttons{
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+
+
+    .buttons-visualizacao {
+        font-size: 20px;
+        color: rgb(208, 146, 171);
+        margin-left: 20px;
+        
+    }
+
+    .modo-grade {
+        padding-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .modo-grade section {
+        width: 40%;
+    }
+</style>
+<body>
     <header>
         <h1>
-            Bem vindo à minha página!
+            Bem-vindo a minha página
         </h1>
         <p>
-            Professor do Ensino Técnico
+            Aluna do ensino técnico
         </p>
     </header>
+    <div class="buttons">
+        <button class="buttons-visualizacao" onclick="mudarGrade()">Visualização Grade</button>
+        <button class="buttons-visualizacao" onclick="mudarLista()">Visualização Lista</button>
+    </div>
 
-    <main>
+    <main id="principal">
         <section>
             <h2>
                 Minhas habilidades
+                <ul>
+                    <li>Lógica de Programação</li>
+                    <li>HTML5 & CSS3</li>
+                    <li>Trabalho em equipe</li>
+                    <li>IOT</li>
+                </ul>
             </h2>
-            <ul>
-                 <li> Lógica de programação</li>
-                 <li>HTML5 & CSS3</li>
-                 <li>Travalho em equipe</li>
-                 <li>IOT</li>
-            </ul>
         </section>
+                <section>
+            <h2>
+                cursos
+                <ul>
+                    <li>Lógica de Programação</li>
+                    <li>Levantamente de requisistios</li>
+                    <li>Sistemas Operacionais</li>
+                    <li>Redes IOT</li>
+                </ul>
+            </h2>
+        </section>
+                        <section>
+            <h2>
+                Hobbies
+                <ul>
+                    <li>Jogar</li>
+                    <li>Dormir</li>
+                    <li>Assistir filmes e séries</li>
+                    <li>Ouvir músicas</li>
+                </ul>
+            </h2>
+        </section>
+
+                 <section>
+            <h2>
+                Contatos
+                <ul>
+                    <li>
+                        <a href="">E-mail: manoela.cordova@aluno.senai.br
+                        </a>
+                    </li>
+                    
+                </ul>
+            </h2>
+        </section>
+        <footer>
+             &copy; 2025 Manoela. Todos os direitos reservados.
+        </footer>
     </main>
+</body>
+<script>
+    function mudarGrade() {
+        const principal= document.getElementById('principal')
+        principal.classList.toggle('modo-grade')
+    }
+   function mudarGrade() {
+        const principal= document.getElementById('principal')
+        principal.classList.add('modo-grade')
+    }
+    function mudarLista() {
+        alert("Oi, sou o botão que muda para lista")
+    }
+    function mudarLista() {
+    const principal= document.getElementById('principal')
+        principal.classList.remove('modo-grade')
+    }
+</script>
 </html>
